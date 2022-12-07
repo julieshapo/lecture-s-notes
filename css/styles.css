@@ -1,4 +1,61 @@
+/* КНОПКИ */
+
+.btn-modal-submit {
+  display: inline-block;
+  /* border: 1px solid transparent;
+  border-radius: 2px; */
+  padding: 20px 43px;
+
+  background: #000000;
+  border: 1px solid #F3C653;
+  border-radius: 2px;
+  
+  font-family: inherit;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+
+.modal-btn-submit:hover,
+.modal-btn-submit:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.modal-btn-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  transition: fill var(--trans-duration) var(--cubic);
+}
+
+.modal-btn-close:hover,
+.modal-btn-close:focus {
+  fill: black;
+}
+
+
+
+
 /* МОДАЛЬНЕ ВІКНО */
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 .backdrop {
   position: fixed;
@@ -40,6 +97,7 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
+  text-align: center;
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--trans-duration) var(--cubic);
@@ -58,21 +116,104 @@
 }
 
 .modal-field {
-  position: relative;
+  width: 100%;
+}
+
+.modal-field:not(:last-child) {
   margin-bottom: 20px;
 }
 
-.modal-label {
+.modal-field:last-child {
+  margin-bottom: 40px;
+}
+
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+ 
+  }
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: #FFFDEE;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: '';
+  top: 20px;
+  right: 10px;
+  border: 1px solid transparent;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/ep_arrow-down-bold.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  background-image: url(../images/ep_arrow-down-bold.svg);
+  top: 20px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div, .select-selected {
+
+  color: #808080;
+  background-color: #FFFDEE;
+  text-align: left;
+  cursor: pointer;
+
+  width: 384px;
+  height: 54px;
+  border: 1px solid #C79002;
+  padding: 16px 12px;
+  border-radius: 2px;
+  margin-bottom: 8px;
+
+  font-family: 'Times New Roman';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.05em;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: #FFFDEE;
+  box-shadow: 2px 2px 15px 2px #999999;
+}
+
+
+.modal-label { 
   display: block;
+  text-align: left;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #C79002;
+  margin-left: 12px;
 }
 
 .modal-input {
-  /* display: block */
   width: 384px;
   height: 54px;
   border: 1px solid #C79002;
@@ -87,63 +228,13 @@
   letter-spacing: 0.05em;
 
   color: #808080;
+  background-color: #FFFDEE;
 
   transition: border-color var(--trans-duration) var(--cubic);
 }
 
 .modal-input:focus {
-  border-color: ;
+  box-shadow: 2px 2px 15px 2px #999999;
 }
 
-.input-select::after {
-  content: "v";
-}
 
-.modal-btn-submit {
-  padding: 10px 52px;
-  min-width: 200px;
-  margin: 0 auto;
-
-  display: flex;
-
-  background-color: ;
-  color: ;
-
-  font-weight: 700;
-  line-height: 1.8;
-  letter-spacing: 0.06em;
-
-  transform: box-shadow var(--trans-duration) var(--cubic);
-}
-
-.modal-btn-submit:hover,
-.modal-btn-submit:focus {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
-.modal-btn-close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-
-  transition: fill var(--trans-duration) var(--cubic);
-}
-
-.modal-btn-close:hover,
-.modal-btn-close:focus {
-  fill: ;
-}
-
-.modal {
-  width: 414px;
-}
