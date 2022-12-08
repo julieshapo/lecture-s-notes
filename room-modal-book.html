@@ -19,62 +19,85 @@
       </button>
       <p class="modal-title">Забронювати столик</p>
       <form class="modal-form">
-        <ul>
-          <li class="modal-field">
-            <input
-              type="text"
-              name="user-name"
-              id="name"
-              class="modal-input"
-              placeholder="Ваше ім’я"
-              aria-label="ім’я"
-              pattern=""
-              required
-            />
-            <label for="name" class="modal-label">На кого забронювати столик?</label>
-          </li>
-  
-          <li class="modal-field">
-            <input
-              type="tel"
-              name="user-tel"
-              id="tel"
-              class="modal-input"
-              placeholder="+38 (___) ___-__-__"
-              aria-label="номер телефону"
-              pattern="+[0-9]" 
-              required
-            />
-            <label for="tel" class="modal-label">Номер телефону</label>
-          </li>
-  
-          <li class="modal-field">
-            <div class="custom-select">
-              
-              <select class="" name="guests-number" id="guests-number" >
-                <option value="value0">1</option>
-                <option value="value1">2</option>
-                <option value="value2">3</option>
-                <option value="value3">4</option>
-              </select>
-            </div>
-            <label class="modal-label" for="guests-number">Столик на яку кількість осіб?</label>
-          </li>
+
+       <ul>
+        <li class="modal-field">
+          <input
+            type="text"
+            name="user-name"
+            id="name"
+            class="modal-input"
+            placeholder="Ваше ім’я"
+            aria-label="ім’я"
+            pattern=""
+            required
+          />
+          <label for="name" class="modal-label">На кого забронювати столик?</label>
+        </li>
+
+        <li class="modal-field">
+          <input
+            type="tel"
+            name="user-tel"
+            id="tel"
+            class="modal-input"
+            placeholder="+38 (___) ___-__-__"
+            aria-label="номер телефону"
+            pattern="+[0-9]" 
+            required
+          />
+          <label for="tel" class="modal-label">Номер телефону</label>
+        </li>
+
+        <li class="modal-field">
+          <div class="custom-select">
             
-          <li class="modal-field">
-             <input id="table-date" class="modal-input" type="text" name="table-date" placeholder="Сьогодні">
-             <label class="modal-label" for="table-date">На яку дату бронювати?</label>
-             </div>
-          </li>
-        </ul>
-       <button type="submit" class="btn-modal-submit">Оформити бронювання</button>
+            <select class="" name="guests-number" id="guests-number" >
+              <option value="value0">1</option>
+              <option value="value1">2</option>
+              <option value="value2">3</option>
+              <option value="value3">4</option>
+            </select>
+
+            <div class="select-items select-hide">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+            </div>
+
+          </div>
+
+          <label class="modal-label" for="guests-number">Столик на яку кількість осіб?</label>
+        </li>
+
+        <li class="modal-field">
+          
+          <div class="custom-select">
+            <select class="" name="table-date" id="table-date" >
+              <option value="value0">Сьогодні</option>
+              <option value="value1">Завтра</option>
+              <option value="value2">Післязавтра</option>
+            </select>
+  
+            <div class="select-selected">Сьогодні</div>
+            <div class="select-items select-hide">
+              <div>Сьогодні</div>
+              <div>Завтра</div>
+              <div>Післязавтра</div>
+            </div>
+          </div>
+
+          <label class="modal-label" for="table-date">Столик на яку кількість осіб?</label>
+        </li>
+       </ul>
+
+        <button type="submit" class="btn-modal-submit">Оформити бронювання</button>
       </form>
     </div>
   </div>
 
- 
 
-<!-- 
   <div class="backdrop is-hidden" data-modal>
     <div class="modal modal-book-room">
       <button type="button" class="modal-btn-close" data-modal-close>
@@ -93,7 +116,7 @@
             class="modal-input"
             placeholder="Ваше ім’я"
             aria-label="ім’я"
-            pattern="[A-Za-zА-Яа-я]"
+            pattern=""
             required
           />
           <label for="name" class="modal-label">На кого забронювати номер?</label>
@@ -194,7 +217,7 @@
         <button type="submit" class="btn modal-btn-submit">Оформити бронювання</button>
       </form>
     </div>
-  </div> -->
+  </div>
 <script src="./js/select.js"></script>
 </body>
 </html>

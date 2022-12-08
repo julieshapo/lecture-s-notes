@@ -1,9 +1,10 @@
 /* КНОПКИ */
 
 .btn-modal-submit {
-  display: inline-block;
-  /* border: 1px solid transparent;
-  border-radius: 2px; */
+  cursor: pointer;
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 2px;
   padding: 20px 43px;
 
   background: #000000;
@@ -35,8 +36,7 @@
   width: 30px;
   height: 30px;
   background-color: transparent;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
+  border: 1px solid transparent;
 
   transition: fill var(--trans-duration) var(--cubic);
 }
@@ -163,10 +163,13 @@ ul {
   box-shadow: 2px 2px 15px 2px #999999;
 }
 
+/* CUSTOM INPUT SELECTED */
+
 
 /* The container must be positioned relative: */
 .custom-select {
   position: relative;
+  width: 100%;
  
   }
 
@@ -179,7 +182,7 @@ ul {
 }
 
 /* Style the arrow inside the select element: */
-.select-selected:after {
+.select-selected::after {
   position: absolute;
   content: '';
   top: 20px;
@@ -193,7 +196,7 @@ ul {
 }
 
 /* Point the arrow upwards when the select box is open (active): */
-.select-selected.select-arrow-active:after {
+.select-selected.select-arrow-active::after {
   background-image: url(../images/ep_arrow-down-bold.svg);
   top: 20px;
 }
@@ -237,6 +240,3 @@ ul {
   background-color: #FFFDEE;
   box-shadow: 2px 2px 15px 2px #999999;
 }
-
-
-
