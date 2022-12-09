@@ -56,18 +56,23 @@
                 <option value="value1">2</option>
                 <option value="value2">3</option>
                 <option value="value3">4</option>
+                <option value="value2">5</option>
+                <option value="value3">6</option>
               </select>
             </div>
             <label class="modal-label" for="guests-number">Столик на яку кількість осіб?</label>
           </li>
             
           <li class="modal-field">
-             <input id="table-date" class="modal-input" type="text" name="table-date" placeholder="Сьогодні">
+             <div class="custom-date">
+             <input type="text" id="table-date" class="modal-input input-date" name="" placeholder="Сьогодні">
+             <input class="table-date-hidden" type="date" name="table-date" id="">
              <label class="modal-label" for="table-date">На яку дату бронювати?</label>
              </div>
           </li>
         </ul>
-       <button type="submit" class="btn-modal-submit">Оформити бронювання</button>
+        
+       <button type="submit" class="btn-modal-submit">Оформити бронювання</button> 
       </form>
     </div>
   </div>

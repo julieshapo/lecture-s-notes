@@ -240,3 +240,36 @@ ul {
   background-color: #FFFDEE;
   box-shadow: 2px 2px 15px 2px #999999;
 }
+
+/* CUSTOM DATE INPUT */
+
+.custom-date {
+   position: relative;
+  }
+
+.custom-date::after {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  top: 20px;
+  right: 10px;
+  border: 1px solid transparent;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/ep_arrow-down-bold.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.table-date-hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 99;
+
+  width: 384px;
+  height: 54px;
+
+
+}
